@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Instagram, Send, Mail, MessageCircle } from "lucide-react";
+import { Instagram, Send, MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 export default function Contact() {
@@ -141,25 +141,6 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* Email fallback */}
-              <div style={{ background: "white", borderRadius: 16, padding: "1.5rem", border: "2px solid var(--border)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
-                  <div style={{ width: 50, height: 50, borderRadius: 14, background: "rgba(249,115,22,0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Mail size={22} color="var(--orange)" />
-                  </div>
-                  <div>
-                    <p style={{ fontWeight: 800, fontSize: "0.95rem", color: "var(--text)" }}>Drop us a message</p>
-                    <p style={{ fontSize: "0.82rem", color: "var(--text-2)" }}>Use the form or reach out directly</p>
-                  </div>
-                </div>
-                <a href="https://kidsdom.ca/pages/contact" target="_blank" rel="noopener noreferrer"
-                  style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "var(--orange)", color: "white", padding: "0.75rem", borderRadius: 10, fontWeight: 700, fontSize: "0.875rem", textDecoration: "none", transition: "background 0.2s" }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--orange-dark)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--orange)")}
-                >
-                  Contact on Kidsdom.ca →
-                </a>
-              </div>
 
               {/* Payments accepted */}
               <div style={{ background: "white", borderRadius: 16, padding: "1.5rem", border: "2px solid var(--border)" }}>

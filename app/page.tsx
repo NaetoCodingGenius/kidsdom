@@ -200,13 +200,13 @@ export default function Home() {
                 <h2 style={{ fontFamily: "var(--font-poppins)", fontSize: "clamp(1.5rem, 4vw, 2.2rem)", fontWeight: 900, color: "white", marginBottom: "1.75rem" }}>
                   Start the Adventure Today
                 </h2>
-                <a href="https://kidsdom.ca/collections/all" target="_blank" rel="noopener noreferrer"
+                <Link href="/shop"
                   style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", background: "white", color: "var(--orange)", padding: "0.9rem 2.25rem", borderRadius: 999, fontWeight: 800, fontSize: "0.95rem", textDecoration: "none", transition: "all 0.2s" }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = "none"; }}
                 >
                   <ShoppingCart size={16} /> Shop Now
-                </a>
+                </Link>
               </div>
             </div>
           </Reveal>
