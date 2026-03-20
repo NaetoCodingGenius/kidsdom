@@ -15,16 +15,21 @@ export default function Contact() {
     setSubmitting(true);
     setError("");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formspree.io/f/mbdzbzqd", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.comment,
+        }),
       });
       if (res.ok) {
         setSent(true);
+        setForm({ name: "", email: "", phone: "", comment: "" });
       } else {
-        const data = await res.json();
-        setError(data.error ?? "Something went wrong. Please try again.");
+        setError("Something went wrong. Please try again.");
       }
     } catch {
       setError("Network error. Please try again.");
