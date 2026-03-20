@@ -103,7 +103,7 @@ export function CartDrawer() {
               </span>
             </div>
             <p style={{ fontSize: "0.75rem", color: "var(--text-3)", textAlign: "center" }}>Taxes and shipping calculated at checkout</p>
-            <a href={cart.checkoutUrl}
+            <a href={cart.checkoutUrl.replace("www.kidsdom.ca", "9510b3-b1.myshopify.com").replace("kidsdom.ca", "9510b3-b1.myshopify.com")}
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "var(--orange)", color: "white", padding: "1rem", borderRadius: 12, fontWeight: 800, fontSize: "1rem", textDecoration: "none", transition: "all 0.2s", boxShadow: "0 6px 20px rgba(249,115,22,0.35)" }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "var(--orange-dark)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "var(--orange)"; (e.currentTarget as HTMLElement).style.transform = "none"; }}
